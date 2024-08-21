@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webcam</title>
+    <style>
+        #webcam {
+            border: solid 2px black;
+            width: 90vw;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay="true" id="webcam"></video>
+
+</body>
+<script>
+    const video = document.getElementById("webcam")
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+                console.log("Something went wrong!");
+            });
+    }
+</script>
+
+</html>

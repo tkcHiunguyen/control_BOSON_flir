@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/config.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/switchBtn.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/input.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/button.css') }}">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aldrich&family=Dosis&family=Geologica&family=Noto+Sans&family=Tektur:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="title">
+        <h1>
+            Camera Settings
+        </h1>
+        <h3>HS001 || Thermal</h3>
+    </div>
+    <div class="table">
+        <ul class="rowbar" onclick="handleItemClick(event)">
+            <li class="lii" onclick="USB_VIDEO_MODE_CONTROLS(this)" id="USB_VIDEO_MODE_CONTROLS">
+                USB VIDEO MODE CONTROLS
+            </li>
+            <li class="lii" onclick="ANALOG_CMOS_CONTROLS(this)" id="ANALOG_CMOS_CONTROLS">
+                ANALOG/CMOS VIDEO CONTROLS
+            </li>
+            <li class="lii" onclick="AGC_CONTROL(this)" id="AGC_CONTROL">
+                AGC CONTROL
+            </li>
+            <li class="lii" onclick="ADVANCED(this)" id="ADVANCED">
+                ADVANCED
+            </li>
+        </ul>
+        <ul class="bottom">
+            <ul class="sidebar" id="list">
+                <li class="sideBtn" id="imageAppearance" onclick="side1()">
+                    Image Appearance
+                </li>
+                <li class="sideBtn" id="system" onclick="side2()">
+                    System
+                </li>
+                <li class="sideBtn" id="diagnosticTools" onclick="side3()">
+                    Diagnostic Tools
+                </li>
+                <li class="sideBtn" id="mediaSettings" onclick="side4()">
+                    Media Settings
+                </li>
+                <li class="sideBtn" id="lensCalibration" onclick="side5()">
+                    Lens Calibration
+                </li>
+                <li class="sideBtn" id="symbols" onclick="side6()">
+                    Symbols
+                </li>
+                <li class="sideBtn" id="radiometry" onclick="side7()">
+                    Radiometry
+                </li>
+                <li class="sideBtn" id="isotherm" onclick="side8()">
+                    Isotherm
+                </li>
+            </ul>
+            <div id="mainSetting"></div>
+
+    </div>
+
+
+    <img class="control" src="{{ url_for('static', filename='/img/button.svg') }}" alt="">
+    <div class="element"></div>
+    <script src="https://kit.fontawesome.com/bf820f96f3.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='/js/flir.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/page.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+.check-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 0;
+    justify-content: space-between
+}
+
+
+.square-toggle-checkbox {
+    display: none;
+}
+
+
+.square-toggle-label {
+    width: 70px;
+    height: 30px;
+    position: relative;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ccc;
+}
+
+.square-toggle-checkbox:not(:checked)+.square-toggle-label::before {
+    content: "";
+    width: 20px;
+    height: 40px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    transition: left 0.3s;
+}
+
+.square-toggle-checkbox:checked+.square-toggle-label::before {
+    content: "";
+    width: 20px;
+    height: 40px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5px;
+    left: 55px;
+    transition: left 0.3s;
+}
+
+.square-toggle-checkbox:not(:checked)+.square-toggle-label:hover {
+    background-color: rgba(255, 255, 255, 0.637);
+    transition: background-color 0.3s;
+}
+
+.square-toggle-checkbox:checked+.square-toggle-label:hover {
+    background-color: #0788bb;
+    transition: background-color 0.3s;
+}
+
+.square-toggle-checkbox:checked+.square-toggle-label {
+    background-color: #0788bbce;
+    transition: background-color 0.3s;
+}
+
+
+
+.square-toggle-checkbox:disabled+.square-toggle-label {
+    width: 70px;
+    height: 30px;
+    position: relative;
+    background-color: rgb(126, 126, 126);
+    transition: background-color 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #838383;
+}
+
+.square-toggle-checkbox:disabled+.square-toggle-label::before {
+    content: "";
+    width: 20px;
+    height: 40px;
+    background-color: #838383;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}

@@ -1,0 +1,16 @@
+input[type=button].btn {
+    width: fit-content;
+    min-width: 350px;
+    padding: 10px 30px;
+    color: rgb(255, 255, 255);
+    background-color: #0099d5;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 15px;
+    border: solid 2px white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=button].btn:hover {
+    background-color: #aaaaaa;
+}

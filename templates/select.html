@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select</title>
+    <!-- <link rel="stylesheet" href="/css/select.css"> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/blackbg.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/select.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Dosis&family=Geologica&family=Noto+Sans&family=Tektur:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="dropdown post-colorize">
+        <div class="dropdown-select">
+            <span class="select"></span>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="dropdown-list">
+            <div class="dropdown-list_item">Post-Colorize</div>
+            <div class="dropdown-list_item">Pre-AGC</div>
+        </div>
+    </div> -->
+    <div class="dropdown">
+      <div class="drop label">analogmode</div>
+      <div class="dropdown-select">
+        <span class="select"></span><i class="fa-solid fa-caret-down"></i>
+      </div>
+      <div class="dropdown-list" id="analogmode" style="display: block">
+        <div class="dropdown-list_item" value="NTSC">NTSC</div>
+        <div class="dropdown-list_item" value="PAL">PAL</div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/bf820f96f3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
